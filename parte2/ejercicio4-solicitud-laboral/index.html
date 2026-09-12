@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 4 · Solicitud de empleo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="form-page">
+    <section class="form-section">
+      <div class="form-container">
+        <header class="form-header">
+          <span class="eyebrow">EMPLEO</span>
+          <h1>Postúlese a una vacante</h1>
+          <p>Complete sus datos y adjunte su hoja de vida. Los campos con <strong>*</strong> son obligatorios.</p>
+        </header>
+
+        <form class="contact-form" action="#" method="post" novalidate>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="nombre">
+                Nombre completo
+                <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Julián Pérez" required>
+            </div>
+            <div class="form-field">
+              <label for="correo">
+                Correo electrónico
+                <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input type="email" id="correo" name="correo" autocomplete="email" placeholder="julian@correo.com" required>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="vacante">
+              Vacante de interés
+              <span class="required-mark" aria-hidden="true">*</span>
+            </label>
+            <select id="vacante" name="vacante" required>
+              <option value="" selected disabled>Seleccione una vacante</option>
+              <optgroup label="Tecnología">
+                <option value="frontend">Desarrollador Frontend</option>
+                <option value="backend">Desarrollador Backend</option>
+                <option value="qa">Analista QA</option>
+              </optgroup>
+              <optgroup label="Seguridad">
+                <option value="pentester">Pentester</option>
+                <option value="soc">Analista SOC</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="experiencia">Años de experiencia</label>
+            <input type="number" id="experiencia" name="experiencia" min="0" max="50" step="1">
+          </div>
+
+          <div class="form-field">
+            <label for="cv">
+              Hoja de vida (CV)
+              <span class="required-mark" aria-hidden="true">*</span>
+            </label>
+            <input
+              type="file"
+              id="cv"
+              name="cv"
+              accept=".pdf,.doc,.docx"
+              aria-describedby="cv-help"
+              required
+            >
+            <small id="cv-help" class="field-help">Formatos aceptados: PDF, DOC o DOCX.</small>
+          </div>
+
+          <div class="form-field">
+            <label for="mensaje">Cuéntenos por qué le interesa esta vacante</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="5"
+              maxlength="800"
+              placeholder="Escriba una breve presentación..."
+            ></textarea>
+          </div>
+
+          <label class="choice">
+            <input type="checkbox" name="terminos" required>
+            <span>Autorizo el tratamiento de mis datos personales para fines de selección.</span>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="button button-primary">Enviar postulación</button>
+            <button type="reset" class="button button-secondary">Limpiar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

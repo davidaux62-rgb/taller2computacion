@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 5 · Solicitud de soporte técnico</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="form-page">
+    <section class="form-section">
+      <div class="form-container">
+        <header class="form-header">
+          <span class="eyebrow">SOPORTE</span>
+          <h1>Abrir un caso de soporte</h1>
+          <p>Describa su incidencia y adjunte evidencia si es necesario. Los campos con <strong>*</strong> son obligatorios.</p>
+        </header>
+
+        <form class="contact-form" action="#" method="post" novalidate>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="nombre">
+                Nombre
+                <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Valentina Gómez" required>
+            </div>
+            <div class="form-field">
+              <label for="correo">
+                Correo de contacto
+                <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input type="email" id="correo" name="correo" autocomplete="email" placeholder="valentina@empresa.com" required>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="prioridad">
+              Prioridad del caso
+              <span class="required-mark" aria-hidden="true">*</span>
+            </label>
+            <select id="prioridad" name="prioridad" required>
+              <option value="" selected disabled>Seleccione la prioridad</option>
+              <option value="baja">Baja</option>
+              <option value="media">Media</option>
+              <option value="alta">Alta</option>
+              <option value="critica">Crítica</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="descripcion">
+              Descripción del problema
+              <span class="required-mark" aria-hidden="true">*</span>
+            </label>
+            <textarea
+              id="descripcion"
+              name="descripcion"
+              rows="7"
+              maxlength="1000"
+              placeholder="Describa el problema con el mayor detalle posible..."
+              aria-describedby="descripcion-help"
+              required
+            ></textarea>
+            <small id="descripcion-help" class="field-help">Máximo 1000 caracteres.</small>
+          </div>
+
+          <div class="form-field">
+            <label for="archivo">Evidencia adjunta</label>
+            <input
+              type="file"
+              id="archivo"
+              name="archivo"
+              accept=".pdf,.png,.jpg,.jpeg"
+              multiple
+              aria-describedby="archivo-help"
+            >
+            <small id="archivo-help" class="field-help">Puede adjuntar varios archivos (PDF o imágenes).</small>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="button button-primary">Abrir caso</button>
+            <button type="reset" class="button button-secondary">Limpiar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3 · Encuesta de satisfacción</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="form-page">
+    <section class="form-section">
+      <div class="form-container">
+        <header class="form-header">
+          <span class="eyebrow">ENCUESTA</span>
+          <h1>Cuéntenos su experiencia</h1>
+          <p>Su opinión nos ayuda a mejorar. Los campos con <strong>*</strong> son obligatorios.</p>
+        </header>
+
+        <form class="contact-form" action="#" method="post" novalidate>
+
+          <fieldset>
+            <legend>
+              ¿Cómo calificaría el servicio recibido?
+              <span class="required-mark" aria-hidden="true">*</span>
+            </legend>
+            <div class="choice-list">
+              <label class="choice">
+                <input type="radio" name="calificacion" value="excelente" checked>
+                <span>Excelente</span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="calificacion" value="buena">
+                <span>Buena</span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="calificacion" value="regular">
+                <span>Regular</span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="calificacion" value="mala">
+                <span>Mala</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>¿Qué aspectos le gustaría destacar?</legend>
+            <div class="choice-list">
+              <label class="choice">
+                <input type="checkbox" name="aspectos" value="atencion">
+                <span>Atención al cliente</span>
+              </label>
+              <label class="choice">
+                <input type="checkbox" name="aspectos" value="tiempos">
+                <span>Tiempos de respuesta</span>
+              </label>
+              <label class="choice">
+                <input type="checkbox" name="aspectos" value="precio">
+                <span>Relación precio/calidad</span>
+              </label>
+              <label class="choice">
+                <input type="checkbox" name="aspectos" value="soporte">
+                <span>Soporte técnico</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-field">
+            <label for="satisfaccion">Nivel de satisfacción general</label>
+            <input
+              type="range"
+              id="satisfaccion"
+              name="satisfaccion"
+              min="1"
+              max="10"
+              value="8"
+              aria-describedby="satisfaccion-help"
+            >
+            <small id="satisfaccion-help" class="field-help">1 = muy insatisfecho · 10 = muy satisfecho</small>
+          </div>
+
+          <div class="form-field">
+            <label for="comentarios">Comentarios</label>
+            <textarea
+              id="comentarios"
+              name="comentarios"
+              rows="5"
+              maxlength="600"
+              placeholder="Cuéntenos algo más sobre su experiencia..."
+            ></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="button button-primary">Enviar encuesta</button>
+            <button type="reset" class="button button-secondary">Limpiar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

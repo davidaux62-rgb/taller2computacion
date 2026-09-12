@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 2 · Reserva de mesa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="form-page">
+    <section class="form-section">
+      <div class="form-container">
+        <header class="form-header">
+          <span class="eyebrow">RESERVAS</span>
+          <h1>Reserve su mesa</h1>
+          <p>Indique fecha, hora y número de personas. Los campos con <strong>*</strong> son obligatorios.</p>
+        </header>
+
+        <form class="contact-form" action="#" method="post" novalidate>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="nombre">
+                Nombre
+                <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Camilo Ríos" required>
+            </div>
+            <div class="form-field">
+              <label for="telefono">
+                Teléfono
+                <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                pattern="^\+?[0-9]{7,13}$"
+                title="Ingrese solo números (7 a 13 dígitos)."
+                placeholder="+57 300 000 0000"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="fecha">
+                Fecha
+                <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input type="date" id="fecha" name="fecha" required>
+            </div>
+            <div class="form-field">
+              <label for="hora">
+                Hora
+                <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input type="time" id="hora" name="hora" required>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="personas">
+              Número de personas
+              <span class="required-mark" aria-hidden="true">*</span>
+            </label>
+            <input type="number" id="personas" name="personas" min="1" max="20" step="1" value="2" required>
+          </div>
+
+          <div class="form-field">
+            <label for="comentarios">Comentarios adicionales</label>
+            <textarea
+              id="comentarios"
+              name="comentarios"
+              rows="5"
+              maxlength="500"
+              placeholder="Alguna preferencia, alergia o solicitud especial..."
+            ></textarea>
+            <small class="field-help">Máximo 500 caracteres.</small>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="button button-primary">Confirmar reserva</button>
+            <button type="reset" class="button button-secondary">Limpiar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
