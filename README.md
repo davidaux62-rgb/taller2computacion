@@ -4,5 +4,5 @@
 - `parte2/` -> 5 ejercicios de consolidación del Módulo 36, cada uno en su propia carpeta con `index.html` y `styles.css`.
 
 ## Ramas
-- `Taller2-parte1-TU_CODIGO`: desarrollo del formulario final (parte1/).
-- `Taller2-parte2-TU_CODIGO`: desarrollo de los 5 ejercicios (parte2/).
+- `Taller2-parte1-224034030`: desarrollo del formulario final (parte1/).
+- `Taller2-parte2-224034030`: desarrollo de los 5 ejercicios (parte2/).
